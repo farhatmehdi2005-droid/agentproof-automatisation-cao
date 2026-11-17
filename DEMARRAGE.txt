@@ -1,0 +1,25 @@
+AUTOMATISATION CAO — MEHDI — AGENTPROOF
+
+Prototype autonome de checkout sandbox, avec un testeur et un analyste H Company. L’intégration au moteur AgentProof reste à coordonner. Aucun débit bancaire ni carte réelle.
+
+LANCEMENT LOCAL
+Node.js >=22.9, aucune dépendance à installer.
+Copier .env.example vers .env, puis :
+npm test
+npm start
+Ouvrir http://127.0.0.1:3087
+
+MODE H COMPANY
+Renseigner HAI_API_KEY, HAI_AGENT, HAI_ANALYST_AGENT, PUBLIC_BASE_URL HTTPS et DASHBOARD_TOKEN dans l’environnement privé. Ne jamais publier .env. Le mode manuel fonctionne sans clé H.
+
+FICHIERS
+src/server.mjs : serveur et orchestration.
+src/agents.mjs : testeur H puis analyste H.
+src/diagnosis.mjs : classification d’après les événements.
+public/checkout-state.mjs : états, timeout et prévention des doubles soumissions.
+tests : 36 vérifications automatisées.
+
+POUR LE CTO
+Reprendre les règles utiles après lecture du moteur AgentProof. Ne pas conditionner son score à payment_tested ou order_created : AgentProof s’arrête au checkout sans payer.
+Les preuves docs servent à l’ancienne commande automation:h -- --reuse-proof sur le site éducatif SauceDemo, sans preuve bancaire.
+Les hypothèses de l’IA restent à vérifier ; la classification du sandbox est déterministe.
