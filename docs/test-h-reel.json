@@ -1,0 +1,34 @@
+{
+  "verified_at": "2026-11-17T11:14:41.693Z",
+  "agent": "checkoutproof-testeur-j2",
+  "session_id": "f24be740-6b83-45b4-a066-94ed5a4e5f34",
+  "agent_view_url": "https://platform.hcompany.ai/agents/sessions/f24be740-6b83-45b4-a066-94ed5a4e5f34",
+  "environment": "Site éducatif public SauceDemo. Parcours checkout fictif, confirmation UI uniquement. Aucun PSP ni paiement réel. Cette session ne teste pas notre boutique locale.",
+  "execution": {
+    "summary": "Parcours d'achat fictif complet sur la démo Sauce Labs (saucedemo.com). Connexion standard_user/secret_sauce réussie, ajout de 1× Sauce Labs Backpack ($29.99) au panier, checkout avec coordonnées fictives Camille/Test/75001, récapitulatif vérifié (SauceCard #31337, livraison Free Pony Express, total $32.39), clic Finish une seule fois. Confirmation affichée : « Thank you for your order! » avec coche vert. Aucun paiement bancaire réel n'a été effectué — il s'agit d'une démo fictive.",
+    "last_step": "confirmation",
+    "observations": [
+      "Connexion réussie avec standard_user / secret_sauce, redirection sur inventory.html",
+      "Sauce Labs Backpack ($29.99) ajouté au panier, badge '1' visible sur l'icône panier",
+      "Page cart.html : 1× Sauce Labs Backpack, Item total $29.99, Tax $2.40, Total $32.39",
+      "Checkout step 1 (checkout-step-one.html) : First Name=Camille, Last Name=Test, Zip/Postal Code=75001 remplis, bouton Continue cliqué",
+      "Checkout step 2 – Overview (checkout-step-two.html) : SauceCard #31337 (carte fictive de la démo), livraison 'Free Pony Express Delivery!', Total $32.39",
+      "Bouton Finish cliqué une seule fois, redirection sur checkout-complete.html",
+      "Message de confirmation visible : 'Thank you for your order! Your order has been dispatched, and will arrive just as fast as the pony can get there!'",
+      "Aucun numéro de commande affiché sur la page de confirmation",
+      "Icône panier vide après confirmation (badge disparu)",
+      "Aucune carte bancaire réelle saisie ; paiement simulé par SauceCard #31337 propre à la démo"
+    ],
+    "order_reference": "",
+    "checkout_outcome": "confirmed",
+    "outcome": "confirmed"
+  },
+  "screenshots": [
+    "capture-h-saucedemo-1.png",
+    "capture-h-saucedemo-2.png",
+    "capture-h-saucedemo-3.png",
+    "capture-h-saucedemo-4.png",
+    "capture-h-saucedemo-5.png",
+    "capture-h-saucedemo-6.png"
+  ]
+}
